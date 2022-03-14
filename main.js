@@ -74,23 +74,18 @@ function event2 () {
     mordor.innerHTML = '<div class="card-body" id="mordor"> <ul class="list"> <li class="lead mb-2"> Sens de la responsabilité </li> <li class="lead mb-2"> Esprit équipe </li> <li class="lead mb-2"> facilité de communication </li> <li class="lead mb-2"> Adaptabilité et Dynamisme </li> </ul> </div>'
 }
 
-/* A revoir avec plus de temps (dark mode).
 
-const darkButton = document.getElementById("darkButton")
+const darkButton = document.getElementById("darkButton");
 
-darkButton.addEventListener("click", () => {
-    allNight();
-
+darkButton.addEventListener("change", () => {
+    if (darkButton == true) {
+        document.body.classList.replace("bg-light", "bg-dark");
+        document.body.classList.add("text-white");
+    } else {
+        document.body.classList.replace("bg-dark", "bg-light");
+        document.body.classList.remove("text-white");
+    }
 })
-
-function allNight() {
-    let itsNight = document.getElementById("dark-mode")
-
-    itsNight.classList.add("bg-dark", "text.white");
-
-    return;
-}*/
-
 
 //charger les function apres html.
 window.onload = function() {
